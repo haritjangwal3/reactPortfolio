@@ -26,7 +26,7 @@ function App() {
             <Link to="/contact">Contact</Link>
           </Navigation>
         </Drawer>
-        <Content>
+        <Content style={{height: '100%'}}>
           <div className="page-content" />
           <Main />
         </Content>

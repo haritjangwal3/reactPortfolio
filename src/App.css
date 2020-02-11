@@ -4,13 +4,25 @@
   background: linear-gradient(to top, #2C5364, #203A43, #0F2027); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
 }
 
-.landing-grid {
+#root {
+  height: 100%;
+}
+
+.demo-big-content {
+  height: 100%;
+}
+
+.landingGridDiv {
+  position: fixed;
   background: #41295a;  /* fallback for old browsers */
   background: -webkit-linear-gradient(to top, #2F0743, #41295a);  /* Chrome 10-25, Safari 5.1-6 */
   background: linear-gradient(to top, #2F0743, #41295a); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+  width: 100%;
+  height: 100%;
+  overflow-y:scroll;
+}
+.landing-grid {
   text-align: center;
-  top: 0;
-  left: 0;
   width: 100%;
   height: 100%;
 }
@@ -51,14 +63,26 @@
 .social-links {
   display: flex;
   justify-content: space-between;
-  width: 40%;
+  width: 30%;
   margin: auto;
+  
 }
 
 .social-links i {
   color: red;
+  text-decoration: none;
+  transition: transform .2s; /* Animation */
   font-size: 5em;
   padding: 8px;
+}
+.social-links a {
+  padding: 10px;
+  text-decoration: none;
+}
+.social-links i:hover {
+  color: #41295a;
+  text-decoration: none;
+  transform: scale(1.4);
 }
 
 .contact-body {
@@ -89,3 +113,141 @@
   height: 100%;
   padding: 1em;
 }
+
+.intro-cells {
+  padding-top: 5px;
+  margin: 0px;
+}
+
+.contact-grid-right {
+  background: #000046;  /* fallback for old browsers */
+  background: -webkit-linear-gradient(to right, #1CB5E0, #000046);  /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(to right, #1CB5E0, #000046); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+  padding: 40px;
+  min-height: 100%;;
+}
+
+.contact-grid-left {
+  color: black;
+  padding: 30px;
+}
+
+.contact-label {
+  color: white;
+  font-weight: bold;
+  font-family: oxygen;
+  font-size: 1.5em;
+}
+.contact-grid {
+  height: 100%;
+}
+.dialogStylePortrait {
+  width: 35%;
+  margin: 0 auto;
+  position: fixed;
+  left: 50%;
+  top: 57%;
+  transform: translate(-50%,-50%);
+  z-index: 999;
+  background-color: #eee;
+  padding: 10px 20px 40px;
+  border-radius: 8px;
+  display: flex;
+  flex-direction: column;
+}
+.dialogStyleLandscape {
+  width: 70%;
+  max-width: 100%;
+  margin: 0 auto;
+  position: fixed;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%,-50%);
+  z-index: 999;
+  background-color: #eee;
+  padding: 10px 20px 40px;
+  border-radius: 8px;
+  display: flex;
+  flex-direction: column;
+}
+
+.dialogButton {
+  color: white;
+  background-color: red;
+  margin-bottom: 15px;
+  padding: 3px 8px;
+  cursor: pointer;
+  border-radius: 40%;
+  border: none;
+  width: 30px;
+  height: 30px;
+  font-weight: bold;
+  align-self: flex-end;
+}
+
+.CSoon {
+  color: #c31432;  /* fallback for old browsers */
+  color: -webkit-linear-gradient(to right, #240b36, #c31432);  /* Chrome 10-25, Safari 5.1-6 */
+  color: linear-gradient(to right, #240b36, #c31432); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+  text-align: center;
+  font-family: Oxygen;
+  font-weight: bold;
+  font-size: 64px;
+}
+
+.aboutme {
+  background: #E0EAFC;  /* fallback for old browsers */
+  background: -webkit-linear-gradient(to right, #CFDEF3, #E0EAFC);  /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(to right, #CFDEF3, #E0EAFC); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+  width: 99%;
+  height: 100vh;
+  margin: auto;
+}
+
+.aboutme_banner {
+  background: #544a7d;  /* fallback for old browsers */
+  background: -webkit-linear-gradient(to right, #ffd452, #544a7d);  /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(to right, #ffd452, #544a7d); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+}
+
+.divCenter {
+  border: 2px solid;
+  text-align: center;
+  padding: 5px;
+  margin: auto;
+  border-radius: 50px;
+}
+
+.wrapper {
+  overflow: hidden;
+}
+
+ .main-nav {
+   margin: 0px;
+   padding: 0px;
+   width: 100%;
+ }
+
+ .main-nav li {
+   display: inline-block;
+   padding: 2px;
+ }
+
+ .myProjects {
+   font-family: 'Courier New', Courier, monospace;
+   padding: 10px;
+   text-shadow: 2px 2px red;
+   font-weight: bold;
+   color: black;
+   border-radius: 10px;
+   background: #FFEFBA;  /* fallback for old browsers */
+   background: -webkit-linear-gradient(to right, #FFFFFF, #FFEFBA);  /* Chrome 10-25, Safari 5.1-6 */
+   background: linear-gradient(to right, #FFFFFF, #FFEFBA); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+   width: 80%;
+   margin: auto;
+   transition: transform .2s; /* Animation */
+  }
+ .myProjects:hover {
+    color: cornflowerblue;
+    transform: scale(1.2);
+  }

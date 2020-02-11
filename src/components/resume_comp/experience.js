@@ -2,13 +2,10 @@ import React, { Component } from "react";
 import {Grid, Cell } from 'react-mdl';
 
 class Experience extends Component {
-    constructor(props){
-        super(props);
-    }
+    
     render() {
         return (
             <Grid>
-                
                 <Cell col={9}>
                     <h4 style={{margin: '0px'}}>{this.props.jobPlace}</h4>
                     <p style={{margin: '0px'}}>{this.props.jobTitle}</p>
@@ -25,7 +22,7 @@ class Experience extends Component {
         let roleString = this.props.roles;
         const roles = roleString.split('|');
         const roleList = roles.map((role) =>
-        <li>{role}</li>
+        <li key={role.toString()}>{role}</li>
         );
 
         return (

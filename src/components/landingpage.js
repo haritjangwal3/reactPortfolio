@@ -1,36 +1,34 @@
 import React, { Component } from "react";
 import {Grid, Cell} from 'react-mdl';
+import { Link } from "react-router-dom";
 
 class LandingPage extends Component {
   render() {
     return (
-        <div style={{width: '100%', margin: 'auto'}}>
+        <div className="landingGridDiv">
             <Grid className="landing-grid">
-                <Cell col={4}>
-                    <img src="https://www.pinclipart.com/picdir/big/379-3797946_software-developer-computer-servers-web-others-web-developer.png"
-                    alt="avatar"
-                    className="avatar"
-                    />
-                </Cell>
-                <Cell col={8}>
+                <Cell className="intro-cells" col={12}>
                 <div className="banner-text">
-                        <h1>Junior Web Developer</h1>
+                        <h1 style={{padding: '5px'}}>Junior Web Developer</h1>
                         <hr />
-                        <p>
+                        <p style={{fontSize: '18px'}}>
                             PHP | Python | JavaScript | HTML/CSS | Bootstrap | MySQL | React | NodeJS
                         </p>
                         <div className="social-links">
-                            <a href="https://www.linkedin.com/in/harit-kumar/" target="_blank">
-                                <i class="fa fa-linkedin-square" aria-hidden="true"></i>
+                            <a href="https://www.linkedin.com/in/harit-kumar/" target="_blank" rel="noopener noreferrer">
+                                <i className="fa fa-linkedin-square" aria-hidden="true"></i><br />LinkedIn
                             </a>
-                            <a href="https://github.com/haritjangwal3" target="_blank">
-                                <i class="fa fa-github" aria-hidden="true"></i>
-                            </a>
-                            <a href="https://www.instagram.com/harit_jangwal/" target="_blank">
-                                <i class="fa fa-instagram" aria-hidden="true"></i>
+                            <a href="https://github.com/haritjangwal3" target="_blank" rel="noopener noreferrer">
+                                <i className="fa fa-github" aria-hidden="true"></i><br />GitHub
                             </a>
                         </div>
                     </div>
+                </Cell>
+                
+                <Cell style={{padding: '20px'}} className="intro-cells" col={12}>
+                    <Link  style={{textDecoration: 'none'}} to="/projects">
+                           <h1 className="myProjects" >View My Projects</h1>
+                    </Link>
                 </Cell>
             </Grid>
         </div>
